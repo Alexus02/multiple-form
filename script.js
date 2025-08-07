@@ -29,7 +29,7 @@ function handleTopicSelection() {
   const topicItems = document.querySelectorAll('.li');
   
   topicItems.forEach(item => {
-    // Click event for selection
+
     item.addEventListener('click', function() {
       const topic = this.getAttribute('data-topic');
       
@@ -41,7 +41,7 @@ function handleTopicSelection() {
       updateSummaryTopics();
     });
     
-    // Double-click event for deselection
+
     item.addEventListener('dblclick', function() {
       const topic = this.getAttribute('data-topic');
       const index = selectedTopics.indexOf(topic);
@@ -67,7 +67,7 @@ function updateSummaryTopics() {
   });
 }
 
-// Step 1 to Step 2
+
 next[0].addEventListener("click", function() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -90,14 +90,15 @@ next[0].addEventListener("click", function() {
   handleTopicSelection();
 });
 
-// Step 2 to Step 3
+
 next[1].addEventListener("click", function() {
   first++;
   showForm(first); 
   radioInputs[first].checked = true;   
 });
 
-// Final submission
+
 next[2].addEventListener("click", function() {
   alert("Success");
+
 });
