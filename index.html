@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A multi-step registration form that allows users to enter their details and select topics of interest, with a summary page before final submission." />
+  <meta name="keywords" content="multi-step, registration form, user interface, web development, HTML, CSS" />
+  <meta name="author" content="Alexander Otoo" />
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="style.css">
+  <title>Multi-step Register Form | devChallenges.io</title>
+</head>
+
+<body>
+  <main>
+    <div class="container-1 box">
+      <legend>Register</legend>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Example@gmail.com" name="email" id="email">
+      </form>
+      <button class="btn">Continue</button>
+    </div>
+
+    <div class="container-2 box">
+      <legend>Which topics you are interested in?</legend>
+      <ul class="ul">
+        <li class="li" data-topic="Software Development">Software Development</li>
+        <li class="li" data-topic="User Experience">User Experience</li>
+        <li class="li" data-topic="Graphic Design">Graphic Design</li>
+      </ul>
+      <button class="btn">Continue</button>
+    </div>
+
+    <div class="container-3 box">
+      <h1>Summary</h1>
+      <div>
+        <p class="tag">Name:</p>
+        <p id="fin-name">Emily Johnson</p><br>
+        <p class="tag">Email:</p>
+        <p id="fin-email">emily@emilyjohnsonstl.com</p>
+      </div>
+      <div>
+        <p class="topics">Topics:</p>
+        <ul class="selected-topics">
+          <!-- Selected topics will appear here dynamically -->
+        </ul>
+      </div>
+      <button class="btn">Continue</button>
+    </div>
+
+    <div class="bottom">
+      <p id="steps">Step <span id="current-step">1</span> of 3</p>
+      <div class="step-holder">
+        <input type="radio" name="step" id="step-1" checked>
+        <input type="radio" name="step" id="step-2">
+        <input type="radio" name="step" id="step-3">
+      </div>
+    </div>
+  </main>
+  <div class="author-info">
+    Coded by <a href="#">Your Name Here</a> | Challenge by
+    <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
